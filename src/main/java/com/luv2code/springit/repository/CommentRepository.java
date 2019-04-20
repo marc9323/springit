@@ -1,4 +1,4 @@
-package com.luv2code.springit.respository;
+package com.luv2code.springit.repository;
 
 import com.luv2code.springit.domain.Comment;
 import org.springframework.data.jpa.repository.JpaRepository;
