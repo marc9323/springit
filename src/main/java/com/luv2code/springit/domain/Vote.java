@@ -1,26 +1,27 @@
 package com.luv2code.springit.domain;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
-@Data
 @NoArgsConstructor
-public class Vote {
+@RequiredArgsConstructor
+@Getter @Setter
+public class Vote extends Auditable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue
     private Long id;
 
-    private int vote;
+    @NonNull
+    private short direction; // 1 or -1 up or down
 
-    // user
-    // link
+    @NonNull
+    @ManyToOne
+    private Link link;
+
+
 
 
 }
