@@ -22,7 +22,6 @@ import com.luv2code.springit.service.BeanUtil;
 @Entity
 @RequiredArgsConstructor
 @Getter @Setter
-@ToString
 @NoArgsConstructor
 public class Link extends Auditable {
 
@@ -47,11 +46,6 @@ public class Link extends Auditable {
     private List<Vote> votes = new ArrayList<>();
 
     private int voteCount = 0;
-
-//    public Link(String title, String url){
-//        this.title = title;
-//        this.url = url;
-//    }
 
     public void addComment(Comment comment){
 
