@@ -70,6 +70,7 @@ public class LinkController {
         } else {
             // save our link
             linkService.save(link);
+            System.out.println("***************" + link.getId() + "**********************");
             logger.info("new link was saved successfully!");
             redirectAttributes.addAttribute("id", link.getId()).addFlashAttribute("success", true);
             // flash attributes are attributes that will only live on the next template that you visit.  So you get it on

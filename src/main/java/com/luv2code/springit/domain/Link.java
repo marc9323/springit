@@ -47,6 +47,9 @@ public class Link extends Auditable {
 
     private int voteCount = 0;
 
+    @ManyToOne // many links can belong to one user // we dont need other side of this relationship
+    private User user;
+
     public void addComment(Comment comment){
 
         comments.add(comment);
